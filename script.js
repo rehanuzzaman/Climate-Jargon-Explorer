@@ -41,10 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (initialMessage) initialMessage.style.display = 'none';
 
-        const filteredJargon = jargonData.filter(item =>
-            item.term.toLowerCase().includes(searchTerm) ||
-            item.definition.toLowerCase().includes(searchTerm)
-        );
+        const filteredJargon = jargonData.filter(item => {
+            // Create word boundary regex for term and definition
+            const termRegex = new RegExp(`\\b${escapeRegExp(searchTerm)}\\b`, 'i');
+            const definitionRegex = new RegExp(`\\b${escapeRegExp(searchTerm)}\\b`, 'i');
+
+            return termRegex.test(item.term) || definitionRegex.test(item.definition);
+        });
 
         displayResults(filteredJargon, searchTerm);
     }
@@ -80,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Helper function to highlight search term ---
     function highlightSearchTerm(text, term) {
         if (!term) return text;
-        const regex = new RegExp(`(${escapeRegExp(term)})`, 'gi'); // 'gi' for global, case-insensitive
+        const regex = new RegExp(`(\\b${escapeRegExp(term)}\\b)`, 'gi'); // 'gi' for global, case-insensitive
         return text.replace(regex, '<mark>$1</mark>'); // Wrap matches in <mark> tags
     }
 

@@ -63,10 +63,17 @@ The Climate Jargon Explorer was developed by Rehanuz Zaman, an ICCCAD Youth Fell
 
 ## Version Information
 
-Current Version: 1.0.0
+Current Version: 1.2.0
 
 ## Feedback and Support
 
 We are always looking for ways to improve the Climate Jargon Explorer. If you have any feedback, suggestions, or encounter any issues, please feel free to reach out through the suggestion form or other available channels.
 
 We hope this user manual helps you effectively use the Climate Jargon Explorer to enhance your understanding of climate change terminology!
+
+## Version Control
+1.0.0 - Main Tool
+1.0.1 - New Jargons Added
+1.0.2 - New Jargons Added
+1.1.2 - Interface Updated
+1.2.0 - Algorithm Updated
