@@ -63,7 +63,7 @@ The Climate Jargon Explorer was developed by Rehanuz Zaman, an ICCCAD Youth Fell
 
 ## Version Information
 
-**Current Version: 1.2.0**
+**Current Version: 1.2.1**
 
 1.0.0 - Main Tool
 
@@ -74,6 +74,8 @@ The Climate Jargon Explorer was developed by Rehanuz Zaman, an ICCCAD Youth Fell
 1.1.2 - Interface Updated
 
 1.2.0 - Algorithm Updated
+
+1.2.1 - New Jargons Added
 
 ## Feedback and Support
 
