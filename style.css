@@ -1,0 +1,227 @@
+/* Basic Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #e0f2f7 0%, #b2dfdb 100%); /* Light blue/teal gradient */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Add padding around the body */
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto; /* Center container and add top/bottom margin */
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 77, 64, 0.15); /* Subtle shadow with a hint of dark teal */
+    flex-grow: 1; /* Allow container to grow */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #4db6ac; /* Teal accent line */
+    padding-bottom: 20px;
+}
+
+.tool-title {
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.8em;
+    color: #00695c; /* Darker teal */
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: #00796b; /* Medium teal */
+    font-weight: 300;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 15px 20px; /* Generous padding */
+    padding-right: 50px; /* Space for potential icon */
+    font-size: 1.1em;
+    border: 1px solid #a7d7c5; /* Light teal border */
+    border-radius: 8px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+#searchInput:focus {
+    border-color: #00796b; /* Darker teal on focus */
+    box-shadow: 0 0 8px rgba(0, 121, 107, 0.2);
+}
+
+#searchInput::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.search-icon { /* Optional decorative icon */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+    color: #00796b;
+    opacity: 0.7;
+}
+
+/* Results Area */
+.results-container {
+    margin-top: 20px;
+    flex-grow: 1; /* Allow results to take available space */
+}
+
+.result-item {
+    background-color: #f4f9f8; /* Very light green/blue */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #4db6ac; /* Accent border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.result-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.result-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    color: #00695c; /* Dark teal */
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.result-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.7;
+}
+
+.result-item p strong { /* Highlight potential sub-headings in definition */
+    color: #004d40; /* Darkest teal */
+    font-weight: 600;
+}
+
+/* Not Found Message */
+.not-found-message {
+    text-align: center;
+    font-size: 1.1em;
+    color: #777;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff3e0; /* Light warning color */
+    border: 1px dashed #ffcc80; /* Dashed warning border */
+    border-radius: 8px;
+}
+
+.not-found-message a {
+    color: #00796b; /* Teal link */
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.not-found-message a:hover {
+    text-decoration: underline;
+}
+
+/* Initial Message */
+.initial-message {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px; /* Push footer down */
+    padding-top: 20px;
+    border-top: 1px solid #c8d8d6; /* Light separator line */
+}
+
+.credit {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px 25px;
+    }
+
+    .tool-title {
+        font-size: 2.2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    #searchInput {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+
+    .result-item h3 {
+        font-size: 1.2em;
+    }
+
+    .result-item p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduce padding on very small screens */
+    }
+
+    .container {
+        margin: 10px auto;
+        padding: 15px 20px;
+    }
+
+    .tool-title {
+        font-size: 1.8em;
+    }
+
+    .subtitle {
+        font-size: 0.9em;
+    }
+
+    header {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+}
